@@ -15,12 +15,16 @@
             "yarn lint",
             "prettier --write"
         ],
-        "src/**/*.{css,less,scss,sass,md,json}": ["prettier --write"]
+        "src/**/*.{css,less,scss,sass,md,json}": [
+            "prettier --write"
+        ]
     },
     "dependencies": {
         "vue": "^3.2.45"
     },
     "devDependencies": {
+        "@commitlint/cli": "^17.4.4",
+        "@commitlint/config-conventional": "^17.4.4",
         "@nabla/vite-plugin-eslint": "^1.5.0",
         "@typescript-eslint/eslint-plugin": "^5.53.0",
         "@typescript-eslint/parser": "^5.53.0",
