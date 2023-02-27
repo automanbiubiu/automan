@@ -23,6 +23,21 @@
    - 添加eslint配置文件.eslintrc.cjs
    - 添加编译器配置文件.editorconfig
    - 添加代码格式配置文件.prettierrc
+2. 配置husky + lint-staged + commitlint
+   - 全局安装eslint yarn i -g eslint
+   - 控制台执行 npx husky-init && yarn
+   - 安装lint-staged yarn add lint-staged -D
+   - package.json中添加lint-staged配置选项
+   - 修改.husky/pre-commit文件中的npm run test 为 yarn lint-staged
+   - 安装commitlint yarn add @commitlint/cli @commitlint/config-conventional -D
+   - 配置命令yarn husky add .husky/commit-msg 'yarn commitlint --edit $1'，此时.husky文件夹下会多出一个commit-msg文件
+   - 修改文件最后一行为yarn commitlint --edit $1
+   - 添加commitlint.config.js配置文件
+3. 配置路由
+   - yarn add vue-router@4
+   - 配置路由文件 src/router/index.ts
+   - 注册到vue实例 main.ts use(router)
+   - 安装setup命名增加插件yarn add vite-plugin-vue-setup-extend -D
 
 
 

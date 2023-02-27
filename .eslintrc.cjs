@@ -17,8 +17,10 @@ module.exports = {
     plugins: ['@typescript-eslint', 'prettier'],
     rules: {
         // 校验规则列表
-        'no-console': 'error',
-        'import/no-extraneous-dependencies': 'warn',
         'prettier/prettier': 'error',
+        'no-console': 'error',
+        'import/extensions': 'off',
+        'import/no-unresolved': 'off',
+        'import/no-extraneous-dependencies': 'off'
     }
 }
