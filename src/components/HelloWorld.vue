@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { storeToRefs } from 'pinia'
+import store from '../stores/index'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
-// console.log('123')
+const piniaStore = store()
+const { count: storeCount, computedCount } = storeToRefs(piniaStore)
 </script>
 
 <template>
@@ -12,6 +15,10 @@ const count = ref(0)
 
     <div class="card">
         <button type="button" @click="count++">count is {{ count }}</button>
+        <br />
+        <button type="button" @click="piniaStore.addCount()">
+            storeCount is {{ storeCount }} - {{ computedCount }}
+        </button>
         <p>
             Edit
             <code>components/HelloWorld.vue</code> to test HMR

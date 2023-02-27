@@ -38,6 +38,7 @@
    - 配置路由文件 src/router/index.ts
    - 注册到vue实例 main.ts use(router)
    - 安装setup命名增加插件yarn add vite-plugin-vue-setup-extend -D
+4. 添加Pinia
 
 
 
